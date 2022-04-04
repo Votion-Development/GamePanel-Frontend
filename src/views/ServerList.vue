@@ -1,7 +1,8 @@
 <script lang="ts">
 import { SERVER_STATUS } from "@/lib/constants";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   data() {
     return {
       SERVER_STATUS,
@@ -86,7 +87,7 @@ export default {
       ]
     };
   }
-};
+});
 </script>
 <style>
 * {

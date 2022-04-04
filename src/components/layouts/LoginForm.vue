@@ -1,5 +1,7 @@
 <script lang="ts">
-export default {
+import { defineComponent } from "vue";
+
+export default defineComponent({
   data() {
     return {
       user_email: "",
@@ -11,7 +13,7 @@ export default {
       console.log({ email: this.user_email, password: this.user_password });
     }
   }
-};
+});
 </script>
 
 <template>

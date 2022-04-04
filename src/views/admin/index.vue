@@ -1,16 +1,18 @@
 <script lang="ts">
-import Sidebar from "@/components/layouts/Sidebar.vue";
-import MobileNav from "@/components/layouts/MobileNav.vue";
+import BetterSidebar from "@/components/layouts/BetterSidebar.vue";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   components: {
-    Sidebar,
-    MobileNav
+    BetterSidebar
   }
-};
+});
 </script>
 
 <template>
-  <Sidebar />
-  <MobileNav />
+  <better-sidebar />
+  <mobile-nav />
+  <div class="lg:w-[calc(100vw - 18rem)] md:lg:w-[calc(100vw - 18rem)]">
+    <router-view />
+  </div>
 </template>

@@ -17,7 +17,17 @@ const router = createRouter({
     {
       path: "/admin",
       name: "admin",
-      component: () => import("@/views/admin/index.vue")
+      component: () => import("@/views/admin/index.vue"),
+      children: [
+        {
+          path: "",
+          component: () => import("@/views/admin/servers/ServerOverview.vue")
+        },
+        {
+          path: "create-servers",
+          component: () => import("@/views/admin/servers/CreateServer.vue")
+        }
+      ]
     }
   ]
 });
